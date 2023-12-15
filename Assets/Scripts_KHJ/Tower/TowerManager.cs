@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 public class TowerManager : MonoBehaviour
 {
     public GameObject towerPrefab;
-    public BoxCollider spawnArea; // BoxCollider를 사용하도록 변경
     private Ray ray;
     private RaycastHit hit;
 
@@ -25,11 +24,8 @@ public class TowerManager : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (spawnArea.bounds.Contains(hit.point))
-                {
-                    Vector3 spawnPosition = hit.point;
-                    SpawnTower(spawnPosition);
-                }
+                Vector3 spawnPosition = hit.point;
+                SpawnTower(spawnPosition);
             }
         }
     }
@@ -37,7 +33,6 @@ public class TowerManager : MonoBehaviour
     void SpawnTower(Vector3 spawnPosition)
     {
         // 타워 프리팹을 생성 위치에 생성
-        Debug.Log("타워" + spawnPosition);
-        Instantiate(towerPrefab, spawnPosition, Quaternion.identity);
+        GameObject newTower = Instantiate(towerPrefab, spawnPosition, Quaternion.identity);
     }
 }
