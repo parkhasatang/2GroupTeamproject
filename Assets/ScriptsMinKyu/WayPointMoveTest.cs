@@ -6,10 +6,15 @@ using UnityEngine;
 public class WayPointMoveTest : MonoBehaviour
 {
     [SerializeField] Transform[] MonsterPos;
-    [SerializeField] float speed = 5f;
+    private EnemyStatsHandlerTest _stats;
     int monsterNum = 0;
 
-    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        _stats = GetComponent<EnemyStatsHandlerTest>();
+    }
+
     void Start()
     {
         transform.position = MonsterPos[monsterNum].transform.position;
@@ -26,7 +31,7 @@ public class WayPointMoveTest : MonoBehaviour
         if (gameObject.activeSelf)
         {
             transform.position = Vector2.MoveTowards
-            (transform.position, MonsterPos[monsterNum].transform.position, speed * Time.deltaTime);
+            (transform.position, MonsterPos[monsterNum].transform.position, _stats.currentStats.speed * Time.deltaTime);
         }
         
 

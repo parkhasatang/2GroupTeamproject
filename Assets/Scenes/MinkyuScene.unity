@@ -6696,6 +6696,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 906601162}
     m_Modifications:
+    - target: {fileID: 251913041531656478, guid: 0ad12d244298c0245aaea1e0dcb989e3, type: 3}
+      propertyPath: baseStats.speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 251913041531656478, guid: 0ad12d244298c0245aaea1e0dcb989e3, type: 3}
+      propertyPath: baseStats.maxHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2525255239649639751, guid: 0ad12d244298c0245aaea1e0dcb989e3, type: 3}
       propertyPath: MonsterPos.Array.data[0]
       value: 
@@ -6792,6 +6800,14 @@ PrefabInstance:
     - target: {fileID: 7084708505483147337, guid: 4d04c53408adea143abc4366adad9bfd, type: 3}
       propertyPath: m_Name
       value: Square
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306849278267499791, guid: 4d04c53408adea143abc4366adad9bfd, type: 3}
+      propertyPath: baseStats.speed
+      value: 7.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306849278267499791, guid: 4d04c53408adea143abc4366adad9bfd, type: 3}
+      propertyPath: baseStats.maxHealth
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8940401768611212408, guid: 4d04c53408adea143abc4366adad9bfd, type: 3}
       propertyPath: m_RootOrder
