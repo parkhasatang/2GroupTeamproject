@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8866922978562309804}
   - component: {fileID: 2611735594295383657}
   - component: {fileID: 4940886512329519661}
-  - component: {fileID: 1223186142826956306}
+  - component: {fileID: 5870578568554374074}
   m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8866922978562309804
 SpriteRenderer:
@@ -159,7 +159,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1223186142826956306
+--- !u!114 &5870578568554374074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,10 +168,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7084708505483147337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af24e156f9a2dee4f9318879b1f2efe8, type: 3}
+  m_Script: {fileID: 11500000, guid: ef979c6cdb954d34aac7ab23e94885df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPos:
-  - {fileID: 0}
-  wayPosNum: 0
+  MonsterPos: []
   speed: 5
