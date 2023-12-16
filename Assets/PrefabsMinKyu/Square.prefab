@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8866922978562309804}
   - component: {fileID: 2611735594295383657}
   - component: {fileID: 4940886512329519661}
-  - component: {fileID: 5870578568554374074}
+  - component: {fileID: 6586159157515330918}
   m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8866922978562309804
 SpriteRenderer:
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -159,7 +159,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5870578568554374074
+--- !u!114 &6586159157515330918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,8 +168,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7084708505483147337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef979c6cdb954d34aac7ab23e94885df, type: 3}
+  m_Script: {fileID: 11500000, guid: b2f9d51d4827ab443a35c0320f2c16d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterPos: []
-  speed: 5
+  MonsterPos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  speed: 2
