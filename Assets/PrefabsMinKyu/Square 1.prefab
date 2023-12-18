@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7508914958725253715}
   - component: {fileID: 2525255239649639751}
   - component: {fileID: 251913041531656478}
+  - component: {fileID: -3844977268252111537}
   m_Layer: 6
   m_Name: Square 1
   m_TagString: Untagged
@@ -34,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6781142052486598371
 SpriteRenderer:
@@ -172,12 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f9d51d4827ab443a35c0320f2c16d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterPos:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  speed: 3
 --- !u!114 &251913041531656478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,5 +183,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f7efb8af336ac42a7e6ac88998c440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats:
+    maxHealth: 16
+    speed: 3
+--- !u!114 &-3844977268252111537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2621775801170302972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1301f8d37dea02418076695578d10f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

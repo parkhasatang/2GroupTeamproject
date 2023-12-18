@@ -8,6 +8,8 @@ public class PoolManager : MonoBehaviour
 
     List<GameObject>[] pools;
 
+    public Transform[] wayPoint;
+
     private void Awake()
     {
         pools = new List<GameObject>[prefabs.Length];
