@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -9,6 +11,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private Transform previousParent;
     private RectTransform rect;
     private CanvasGroup canvasGroup;
+    [SerializeField] private GameObject tank;
     
 
     private void Awake()
@@ -20,7 +23,6 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Instantiate(canvas);
         previousParent = transform.parent;
 
         transform.SetParent(canvas);
@@ -37,12 +39,17 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if(transform.parent == canvas)
+        Vector3 mousePosition = Input.mousePosition;
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        Vector3 cellPosition = UIManager.instance.tilemap.WorldToCell(worldPosition);
+        if (transform.parent == canvas)
         {
             transform.SetParent(previousParent);
             rect.position = previousParent.GetComponent<RectTransform>().position;
         }
-
+        Instantiate(tank) ;
+        tank.GetComponent<SpriteRenderer>().sprite = GetComponent<Image>().sprite;
+        tank.transform.position= cellPosition;
         canvasGroup.alpha = 1.0f;
         canvasGroup.blocksRaycasts = true;
     }

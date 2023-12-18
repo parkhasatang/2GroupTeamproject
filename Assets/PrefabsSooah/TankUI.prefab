@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 885056318462218634}
   - component: {fileID: 7247536247576823314}
   m_Layer: 5
-  m_Name: Tank
+  m_Name: TankUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,3 +102,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56057bec9a77f99468206e08e82ef66b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tank: {fileID: 8670612430138955815}
