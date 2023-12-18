@@ -11,7 +11,9 @@ public class DHEnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("SpawnEnemy", 0f, 1f);        
+        InvokeRepeating("SpawnEnemy", 0f, 1f);
+
+        AudioManager.instance.PlayBgm(true);
     }
 
     private void SpawnEnemy()
