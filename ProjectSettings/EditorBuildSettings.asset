@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/DeokScene.unity
+    guid: 94d912e1a8c897a47a44c465323bd67b
+  - enabled: 1
+    path: Assets/Scenes/StartDeokScene.unity
+    guid: 77ae5208f1b6e3d438a1553b3df5953f
   m_configObjects: {}
