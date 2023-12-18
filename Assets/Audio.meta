@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Audio.meta
 guid: 146b0a7c918fa1f4ba53af7cae02a6d0
+========
+guid: f54d1bd14bd3ca042bd867b519fee8cc
+>>>>>>>> sooah:Assets/TextMesh Pro.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
