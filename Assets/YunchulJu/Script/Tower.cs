@@ -12,6 +12,8 @@ public class Tower : MonoBehaviour
     public Transform AttackPoint; //공격지점
     public float LastAttackTime; //이전에 공격이 발동한 시간
     private float CurrentCooldown = 0f; // 실시간으로 줄어드는 공격 쿨타임
+    public GameObject bulletPrefab;
+    
 
     private void Update()
     {
@@ -25,10 +27,25 @@ public class Tower : MonoBehaviour
 
     private void Attack()
     {
-        //Collider2D[] Enemies = 
-        //foreach(Collider2D Enemy in enemies)
-        Debug.Log("타워의 공격");
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, AttackRange);
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Enemy"))
+            {
+                // 타워에서 총알 생성
+                Vector3 spawnPosition = transform.position;
+                Bullet bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity).GetComponent<Bullet>();
+                bullet.SetTarget(collider.transform, AttackDamage);
+                Debug.Log("타워의 공격");
+            }
+       
+        }
     }
+
+    ////Collider2D[] Enemies = 
+    ////foreach(Collider2D Enemy in enemies)
+    //}
     public void OnDrawGizmosSelected()  //공격범위 확인용
     {
         Gizmos.color = Color.red;
