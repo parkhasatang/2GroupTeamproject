@@ -1815,7 +1815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 7084708505483147337, guid: 4d04c53408adea143abc4366adad9bfd, type: 3}
-  - {fileID: 2621775801170302972, guid: 0ad12d244298c0245aaea1e0dcb989e3, type: 3}
+  - {fileID: 2621775801170302972, guid: a42e7efbc8c64304b868ec629c9711e6, type: 3}
   wayPoint:
   - {fileID: 196064869}
   - {fileID: 1372615594}
