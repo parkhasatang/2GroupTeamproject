@@ -10,13 +10,15 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("SpawnEnemy", 0f, 1f);        
+        InvokeRepeating("SpawnEnemy", 0f, 1f);
+        AudioManager.instance.PlayBgm(true);
     }
 
     private void SpawnEnemy()
     {
         GameObject enemy = poolManager.Get(Random.Range(0,2));
         SpawnPosition = new Vector3(-11.48f, 6.46f, 0);
-        enemy.transform.position = SpawnPosition;     
+        enemy.transform.position = SpawnPosition;
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
     }
 }
