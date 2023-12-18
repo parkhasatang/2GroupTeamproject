@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7274336248580954843}
   - component: {fileID: 5268499040780504333}
   - component: {fileID: 1542513206350478502}
-  - component: {fileID: -5539557175850283552}
+  - component: {fileID: -8940390957425336668}
   m_Layer: 0
   m_Name: Plot
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 7477827516038983822, guid: dc747d0a3cdf6594f9f275fdd2a48b4b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.25490198}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.25490198}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-5539557175850283552
+--- !u!114 &-8940390957425336668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

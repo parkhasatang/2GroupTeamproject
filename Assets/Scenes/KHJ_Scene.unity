@@ -6019,7 +6019,7 @@ GameObject:
   - component: {fileID: 1363557501}
   - component: {fileID: 1363557502}
   m_Layer: 0
-  m_Name: TowerSpawner
+  m_Name: LevelManager
   m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6049,41 +6049,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1363557500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46a87509524d30148b9c1498bed82fb5, type: 3}
+  m_Script: {fileID: 11500000, guid: c8cad56e5eb5a984fbe9a41f7b84bd9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 2139801065807715178, guid: c30e42326aeb1194ea81c61d98eb0d6a, type: 3}
---- !u!1 &1409123807
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1409123808}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1409123808
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409123807}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.36269847, y: -0.042112768, z: 5.5484376}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  towerPrefabs:
+  - {fileID: 6445832650652090849, guid: a3b6b835720305248aad35c1fce45d5e, type: 3}
 --- !u!1 &1445116221
 GameObject:
   m_ObjectHideFlags: 0
@@ -6122,7 +6092,7 @@ Transform:
   - {fileID: 880227209}
   - {fileID: 1941213256}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1744253012
 PrefabInstance:
