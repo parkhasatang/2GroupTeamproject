@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretRotationPoint: {fileID: 2360988801246419291}
-  targetingRange: 4
+  targetingRange: 20
 --- !u!1 &8305407799659216046
 GameObject:
   m_ObjectHideFlags: 0

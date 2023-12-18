@@ -112,6 +112,7 @@ MonoBehaviour:
     m_Bits: 0
   AttackPoint: {fileID: 0}
   LastAttackTime: 0
+  bulletPrefab: {fileID: 4372951046703957390, guid: b5feb560dcdc23d4187669311da6b33a, type: 3}
 --- !u!1 &8983272406813377683
 GameObject:
   m_ObjectHideFlags: 0
