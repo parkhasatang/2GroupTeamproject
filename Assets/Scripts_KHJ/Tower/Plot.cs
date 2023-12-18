@@ -34,6 +34,6 @@ public class Plot : MonoBehaviour
         GameObject towerToBuild = BuildManager.main.GetSelectedTower();
         tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
 
-        // AudioManager.instance.PlaySfx(AudioManager.Sfx.Tower);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Tower);
     }
 }
