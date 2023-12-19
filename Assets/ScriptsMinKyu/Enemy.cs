@@ -7,19 +7,21 @@ public class Enemy : MonoBehaviour
 {
     private EnemyStatsHandlerTest stats;
     private Animator animator;
+    public Action OnEnemyHit;
 
     private void Awake()
     {
         stats = GetComponent<EnemyStatsHandlerTest>();
         animator = GetComponentInChildren<Animator>();
+        OnEnemyHit += EnemyHit;
     }
 
     private void EnemyHit()
     {
-        //stats.currentStats.maxHealth -= 타워 공격력 적어주기
+        stats.currentStats.maxHealth -= 10;// 타워 공격력이랑 연결해주기.
         if (stats.currentStats.maxHealth <= 0)
         {
-            gameObject.SetActive(false);
+            gameObject.SetActive(false);//1초뒤에 해주기 죽는 모션 표현하기
             animator.SetBool("IsDead", true);
         }
     }

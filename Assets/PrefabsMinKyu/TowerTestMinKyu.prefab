@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3755394375795518388}
   - component: {fileID: 555062434361922436}
   - component: {fileID: -6634343568689140537}
-  - component: {fileID: 4719123576556777330}
+  - component: {fileID: -4423688634578354283}
   m_Layer: 0
-  m_Name: TestTow
+  m_Name: TowerTestMinKyu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4719123576556777330
+--- !u!114 &-4423688634578354283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,13 +101,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7826726789191750384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b62a3e660d11ebc46bd0009bedf35fae, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dce82d8d84465a4ba56f400f9c2f874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDamage: 10
-  AttackRange: 10
+  AttackDamage: 1
+  AttackRange: 4
   AttackCooltime: 1
-  bulletPrefab: {fileID: 9022124610621113898, guid: 85f4156584bb9574db965d1d99e696a3, type: 3}
+  bulletPrefab: {fileID: 9022124610621113898, guid: f46ee6f5acc8fec46a087ed0353ca32e, type: 3}
 --- !u!1 &8983272406813377683
 GameObject:
   m_ObjectHideFlags: 0
