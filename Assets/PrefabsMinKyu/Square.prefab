@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8866922978562309804}
   - component: {fileID: 2611735594295383657}
   - component: {fileID: 4940886512329519661}
-  - component: {fileID: 6586159157515330918}
   - component: {fileID: 8306849278267499791}
   - component: {fileID: 6017010827442749099}
+  - component: {fileID: 1671892015378182386}
   m_Layer: 6
   m_Name: Square
   m_TagString: Enemy
@@ -161,18 +161,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6586159157515330918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7084708505483147337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2f9d51d4827ab443a35c0320f2c16d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8306849278267499791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,3 +188,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1301f8d37dea02418076695578d10f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1671892015378182386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7084708505483147337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef979c6cdb954d34aac7ab23e94885df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHP: {fileID: 0}

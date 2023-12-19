@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -6634343568689140537}
   - component: {fileID: 4719123576556777330}
   m_Layer: 0
-  m_Name: Tower
+  m_Name: TestTow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,9 +105,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackDamage: 10
-  AttackRange: 2
+  AttackRange: 10
   AttackCooltime: 1
-  bulletPrefab: {fileID: 9022124610621113898, guid: a3acc7d4b24afb2479cf5ab575af5fbd, type: 3}
+  bulletPrefab: {fileID: 9022124610621113898, guid: 85f4156584bb9574db965d1d99e696a3, type: 3}
 --- !u!1 &8983272406813377683
 GameObject:
   m_ObjectHideFlags: 0

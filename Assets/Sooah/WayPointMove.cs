@@ -5,14 +5,21 @@ using UnityEngine;
 
 public class WayPointMove : MonoBehaviour
 {
-    [SerializeField] Transform[] MonsterPos;
-    [SerializeField] float speed = 5f;
+    private PoolManager poolManager;
+    private EnemyStatsHandlerTest _stats;
+    private PlayerHP playerHP;
     int monsterNum = 0;
 
-    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        _stats = GetComponent<EnemyStatsHandlerTest>();
+        poolManager = GetComponentInParent<PoolManager>();
+    }
+
     void Start()
     {
-        transform.position = MonsterPos[monsterNum].transform.position;
+        transform.position = poolManager.wayPoint[monsterNum].transform.position;
     }
 
     // Update is called once per frame
@@ -23,13 +30,25 @@ public class WayPointMove : MonoBehaviour
 
     public void Movepath()
     {
-        transform.position = Vector2.MoveTowards
-            (transform.position, MonsterPos[monsterNum].transform.position, speed * Time.deltaTime);
+        if (gameObject.activeSelf)
+        {
+            transform.position = Vector2.MoveTowards
+            (transform.position, poolManager.wayPoint[monsterNum].transform.position, _stats.currentStats.speed * Time.deltaTime);
+        }
 
-        if(transform.position == MonsterPos[monsterNum].transform.position )
+
+        if (transform.position == poolManager.wayPoint[monsterNum].transform.position)
             monsterNum++;
 
-        if(monsterNum == MonsterPos.Length)
+        if (monsterNum == poolManager.wayPoint.Length)
+        {
+            
+            gameObject.SetActive(false);
             monsterNum = 0;
+            UIManager.instance.playerHP.TakeDamage(1);
+        }
+
     }
+
+    
 }
