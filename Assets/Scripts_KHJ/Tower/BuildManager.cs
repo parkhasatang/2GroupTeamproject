@@ -21,5 +21,10 @@ public class BuildManager : MonoBehaviour
     {
         return turretShop [selectedTower];
     }
-        
+
+    public void SetSelectedTower(int _selectedTower)
+    {
+        selectedTower = _selectedTower;
+    }
+
 }
