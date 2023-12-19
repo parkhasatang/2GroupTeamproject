@@ -30,9 +30,11 @@ public class Plot : MonoBehaviour
     {
         //Debug.Log("Build tower here : " +name);
         if (tower != null) return;
-        
-        GameObject towerToBuild = BuildManager.main.GetSelectedTower();
-        tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
+
+        TurretShop towerToBuild = BuildManager.main.GetSelectedTower();
+        //GameObject towerToBuild = BuildManager.main.GetSelectedTower();
+        //tower = Instantiate(towerToBuild transform.position, Quaternion.identity);
+        tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
 
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Tower);
     }
