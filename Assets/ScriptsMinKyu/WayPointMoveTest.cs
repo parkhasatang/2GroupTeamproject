@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class WayPointMoveTest : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class WayPointMoveTest : MonoBehaviour
 
     void Start()
     {
-        transform.position = poolManager.wayPoint[monsterNum].transform.position;
+        transform.position = poolManager.wayPoint[monsterNum].position;
     }
 
     // Update is called once per frame
@@ -31,8 +32,26 @@ public class WayPointMoveTest : MonoBehaviour
     {
         if (gameObject.activeSelf)
         {
-            transform.position = Vector2.MoveTowards
-            (transform.position, poolManager.wayPoint[monsterNum].transform.position, _stats.currentStats.speed * Time.deltaTime);
+            //오브젝트 회전
+            Vector3 directionToTarget = poolManager.wayPoint[monsterNum].position - gameObject.transform.position;
+            if (monsterNum == 1)
+            {
+                Quaternion rotation = Quaternion.Euler(new Vector3(0f, 180f, 0f));
+                gameObject.transform.rotation = rotation;
+            }
+            else if (monsterNum == 2)
+            {
+                Quaternion rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
+                gameObject.transform.rotation = rotation;
+            }
+            else if (monsterNum == 3)
+            {
+                Quaternion rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+                gameObject.transform.rotation = rotation;
+            }
+            // 오브젝트 이동
+            gameObject.transform.position = Vector3.MoveTowards
+            (gameObject.transform.position, poolManager.wayPoint[monsterNum].transform.position, _stats.currentStats.speed * Time.deltaTime);
         }
         
 
@@ -44,6 +63,7 @@ public class WayPointMoveTest : MonoBehaviour
             gameObject.SetActive(false);
             monsterNum = 0;
         }
-            
+        
     }
+    
 }
