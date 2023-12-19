@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
         GameObject enemy = poolManager.Get(Random.Range(0,2));
-        SpawnPosition = new Vector3(-11.48f, 6.46f, 0);
+        SpawnPosition = new Vector3(-11.48f, 6.46f, -10f);
         enemy.transform.position = SpawnPosition;
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
     }
