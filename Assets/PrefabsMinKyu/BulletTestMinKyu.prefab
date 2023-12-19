@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4107514701524571772}
   - component: {fileID: 7045146028073455260}
-  - component: {fileID: -9076674941517854979}
+  - component: {fileID: -1325885705123196437}
   m_Layer: 0
-  m_Name: testBul
+  m_Name: BulletTestMinKyu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-9076674941517854979
+--- !u!114 &-1325885705123196437
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,6 +94,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 9022124610621113898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22fd42efeb4bdf443bcc8e8035cab62a, type: 3}
+  m_Script: {fileID: 11500000, guid: 034084657831d464a91780b4cf29ab09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
