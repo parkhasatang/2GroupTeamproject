@@ -107,11 +107,6 @@ MonoBehaviour:
   AttackDamage: 10
   AttackRange: 10
   AttackCooltime: 1
-  EnemyLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  AttackPoint: {fileID: 0}
-  LastAttackTime: 1
   bulletPrefab: {fileID: 9022124610621113898, guid: 85f4156584bb9574db965d1d99e696a3, type: 3}
 --- !u!1 &8983272406813377683
 GameObject:
