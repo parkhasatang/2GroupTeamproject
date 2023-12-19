@@ -7743,9 +7743,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cad56e5eb5a984fbe9a41f7b84bd9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefabs:
-  - {fileID: 6445832650652090849, guid: a3b6b835720305248aad35c1fce45d5e, type: 3}
-  - {fileID: 6445832650652090849, guid: 019522703f188d9469fdc683578249ad, type: 3}
+  turretShop:
+  - name: Basic Turret
+    cost: 0
+    prefab: {fileID: 6445832650652090849, guid: a3b6b835720305248aad35c1fce45d5e, type: 3}
+  - name: Test Turret
+    cost: 0
+    prefab: {fileID: 6445832650652090849, guid: 019522703f188d9469fdc683578249ad, type: 3}
 --- !u!1 &1445116221
 GameObject:
   m_ObjectHideFlags: 0
