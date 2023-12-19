@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6781142052486598371}
   - component: {fileID: 2121067769085708715}
   - component: {fileID: 7508914958725253715}
-  - component: {fileID: 4172351228684677669}
   - component: {fileID: 862264691887664827}
   - component: {fileID: -3233831727546323940}
+  - component: {fileID: -5588585759228905492}
   m_Layer: 6
   m_Name: Square 1
   m_TagString: Enemy
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.7278337, g: 0.9056604, b: 0.71342117, a: 1}
   m_FlipX: 0
@@ -161,19 +161,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4172351228684677669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2621775801170302972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af24e156f9a2dee4f9318879b1f2efe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
 --- !u!114 &862264691887664827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,3 +188,15 @@ MonoBehaviour:
   baseStats:
     maxHealth: 14
     speed: 3
+--- !u!114 &-5588585759228905492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2621775801170302972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9d51d4827ab443a35c0320f2c16d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
