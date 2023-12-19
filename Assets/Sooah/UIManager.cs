@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class UIManager : MonoBehaviour
 {
-    public Tilemap tilemap;
+    public PlayerHP playerHP;
     public static UIManager instance;
 
     private void Awake()
