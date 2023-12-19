@@ -28,6 +28,13 @@ public class Plot : MonoBehaviour
 
     private void OnMouseDown() //마우스로 클릭하면, 타워가 생성된다.
     {
+        //팝업이 뜨는 코드로 변경.
+        //선택한 위치에 타워 둘 수 있게.
+        //팝업이 떠있는 동안에는 1번 팝업이 뜨고 있다면 2~9번 안 누르게. (뭐, 이건 눈치 못 챌 수도 있음.
+        //탱크가 설치된 위치에는 클릭되면 안됨.
+        //뜬다면 업데이트 UI.
+
+
         //Debug.Log("Build tower here : " +name);
         if (tower != null) return;
 
