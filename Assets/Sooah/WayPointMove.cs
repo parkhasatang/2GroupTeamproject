@@ -7,7 +7,7 @@ public class WayPointMove : MonoBehaviour
 {
     private PoolManager poolManager;
     private EnemyStatsHandlerTest _stats;
-    [SerializeField] private PlayerHP playerHP;
+    private PlayerHP playerHP;
     int monsterNum = 0;
 
 
@@ -45,7 +45,7 @@ public class WayPointMove : MonoBehaviour
             
             gameObject.SetActive(false);
             monsterNum = 0;
-            playerHP.TakeDamage(1);
+            UIManager.instance.playerHP.TakeDamage(1);
         }
 
     }
