@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
         animator.SetBool("IsDead", true);
         stats.currentStats.speed = 0;
         gameObject.tag = "Dead";
+        SoundManager.Instance.PlaySFX("Coin");
         wayPointMoveTest.ResetWayPoint();
         yield return new WaitForSeconds(deathDelay);
         gameObject.SetActive(false);

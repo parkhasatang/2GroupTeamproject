@@ -77,4 +77,9 @@ public class SoundManager : MonoBehaviour
     {
         sfxSource.volume = volume;
     }
+
+    public void ClickBtnSound()
+    {
+        SoundManager.Instance.PlaySFX("Select");
+    }
 }

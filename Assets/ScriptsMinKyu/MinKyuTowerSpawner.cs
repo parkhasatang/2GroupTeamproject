@@ -9,6 +9,7 @@ public class MinKyuTowerSpawner : MonoBehaviour
     {
         Transform selectedTransform = MinKyuUiManager.I.PlotTransform[MinKyuUiManager.I.SelectPlotData];
         Instantiate(TowersType[WhatTower - 1], selectedTransform.position, Quaternion.identity);
+        SoundManager.Instance.PlaySFX("Tower");
         selectedTransform.GetComponent<PlotMinKyu>().isOccupied = true;// ø∑±∏∏Æ ≈Î∑Œ ∂’¿∫∞≈¿”.
         MinKyuUiManager.I.CloseTowerShopUi();
     }
