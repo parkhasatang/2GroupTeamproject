@@ -14,6 +14,11 @@ public class PlayerGold : MonoBehaviour
         get => currentGold;
     }
 
+    private void Start()
+    {
+        UIManager.instance.stageClearAction += ResetPlayerGold;
+    }
+
     public void GoldPlus(int gold) // ÀûÀÌ Æ÷Å¾¿¡°Ô »ç¸ÁÇßÀ»¶§ °ñµå È¹µæÇÔ¼ö ºÒ·¯ÁÜ
     {
         CurrentGold += gold;
@@ -26,5 +31,10 @@ public class PlayerGold : MonoBehaviour
             return;
         }
         CurrentGold -= gold;
+    }
+
+    public void ResetPlayerGold()
+    {
+        currentGold = 100;
     }
 }
