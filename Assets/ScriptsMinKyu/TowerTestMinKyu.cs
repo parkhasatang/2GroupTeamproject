@@ -5,9 +5,9 @@ using UnityEngine;
 public class TowerTestMinKyu : MonoBehaviour
 {
     // 공격력, 사정거리, 공격쿨타임, (공격유형, 공격속성) 에너미서치, 설치전 공격범위 보이게
-    public int AttackDamage = 10; //공격력
-    public float AttackRange = 4f; //공격범위
-    public float AttackCooltime = 1f; //매 공격간의 쿨타임(현재 10초)
+    public int AttackDamage; //공격력
+    public float AttackRange; //공격범위
+    public float AttackCooltime; //매 공격간의 쿨타임(현재 10초)
     private float CurrentCooldown = 0f; // 실시간으로 줄어드는 공격 쿨타임
     public GameObject bulletPrefab;
     Collider2D closestEnemy = null;
@@ -16,7 +16,6 @@ public class TowerTestMinKyu : MonoBehaviour
 
     private void Update()
     {
-        closestEnemy = null;
         closestDistance = float.MaxValue;
 
         CurrentCooldown -= Time.deltaTime; //실시간으로 쿨타임 감소.
@@ -31,6 +30,8 @@ public class TowerTestMinKyu : MonoBehaviour
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, AttackRange);
 
+        closestEnemy = null;
+
         foreach (Collider2D collider in colliders)
         {
             if (collider.CompareTag("Enemy"))
@@ -42,7 +43,6 @@ public class TowerTestMinKyu : MonoBehaviour
                 {
                     closestEnemy = collider;
                     closestDistance = distanceToEnemy;
-                    Debug.Log("통과대써");
                 }
                 //// 타워에서 총알 생성
                 //Vector3 spawnPosition = transform.position;
@@ -58,7 +58,6 @@ public class TowerTestMinKyu : MonoBehaviour
             Vector3 spawnPosition = transform.position;
             BulletTestMinKyu bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity).GetComponent<BulletTestMinKyu>();
             bullet.SetTarget(closestEnemy.transform, AttackDamage);
-            Debug.Log("타워의 공격");
         }
     }
 
@@ -66,9 +65,9 @@ public class TowerTestMinKyu : MonoBehaviour
     ////Collider2D[] Enemies = 
     ////foreach(Collider2D Enemy in enemies)
     //}
-    /*public void OnDrawGizmosSelected()  //공격범위 확인용
+    public void OnDrawGizmosSelected()  //공격범위 확인용
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, AttackRange);
-    }*/
+    }
 }

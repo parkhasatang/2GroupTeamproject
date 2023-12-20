@@ -7,7 +7,6 @@ public class BulletTestMinKyu : MonoBehaviour
     private Transform target;
     private int damage;
     private List<Bullet> Bullets;
-
     // Update is called once per frame
     public void SetTarget(Transform _target, int _damage)
     {
@@ -21,16 +20,17 @@ public class BulletTestMinKyu : MonoBehaviour
         float distance = Vector3.Distance(transform.position, target.position);
         if (distance < 0.1f)
         {
-            DealDamage();
+            /*DealDamage();*/
+            target.GetComponent<Enemy>().EnemyHit(damage);
             Destroy(gameObject); // 적에 도달하면 총알 제거
         }
     }
-    void DealDamage()
+    /*void DealDamage()
     {
         Enemy enemy = target.GetComponentInChildren<Enemy>();
         if (enemy != null)
         {
             enemy.OnEnemyHit?.Invoke();
         }
-    }
+    }*/
 }

@@ -13,7 +13,7 @@ public class WayPointMoveTest : MonoBehaviour
 
     private void Awake()
     {
-        _stats = GetComponent<EnemyStatsHandlerTest>();
+        _stats = GetComponentInParent<EnemyStatsHandlerTest>();
         poolManager = GetComponentInParent<PoolManager>();
     }
 
@@ -33,7 +33,7 @@ public class WayPointMoveTest : MonoBehaviour
         if (gameObject.activeSelf)
         {
             //오브젝트 회전
-            Vector3 directionToTarget = poolManager.wayPoint[monsterNum].position - gameObject.transform.parent.position;
+            Vector3 directionToTarget = poolManager.wayPoint[monsterNum].position - gameObject.transform.position;
             if (monsterNum == 1)
             {
                 Quaternion rotation = Quaternion.Euler(new Vector3(0f, 180f, 0f));
@@ -61,9 +61,14 @@ public class WayPointMoveTest : MonoBehaviour
         if(monsterNum == poolManager.wayPoint.Length)
         {
             gameObject.SetActive(false);
-            monsterNum = 0;
+            ResetWayPoint();
         }
         
+    }
+
+    public void ResetWayPoint()
+    {
+        monsterNum = 0;
     }
     
 }
