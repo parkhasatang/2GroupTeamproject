@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Tower : MonoBehaviour
 {
@@ -12,8 +13,12 @@ public class Tower : MonoBehaviour
     public GameObject bulletPrefab;
     Collider2D closestEnemy = null;
     float closestDistance = float.MaxValue;
+    Vector3 spawnPosition;
 
-
+    private void Start()
+    {
+        spawnPosition = transform.position;
+    }
     private void Update()
     {
         closestEnemy = null;
@@ -24,6 +29,18 @@ public class Tower : MonoBehaviour
         {
             Attack();
             CurrentCooldown = AttackCooltime; //공격후 쿨타임 다시돌아가게함
+        }
+        RotateGun();
+    }
+
+    private void RotateGun()
+    {
+        if (closestEnemy != null)
+        {
+            Vector2 directionToEnemy = closestEnemy.transform.position - transform.position;
+            float angle = Mathf.Atan2(directionToEnemy.y, directionToEnemy.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, angle);
+            transform.position = spawnPosition;
         }
     }
 
