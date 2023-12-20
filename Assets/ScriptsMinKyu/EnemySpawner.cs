@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("SpawnEnemy", 0f, 1f);
-        AudioManager.instance.PlayBgm(true);
+        
     }
 
     private void SpawnEnemy()
@@ -21,6 +21,6 @@ public class EnemySpawner : MonoBehaviour
         enemy.GetComponent<EnemyStatsHandlerTest>().UpdateEnemyStats(); // 한번에 다 초기값으로 초기화 시킴
         SpawnPosition = new Vector3(-11.48f, 6.46f, -10f);
         enemy.transform.position = SpawnPosition;
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
+        
     }
 }
