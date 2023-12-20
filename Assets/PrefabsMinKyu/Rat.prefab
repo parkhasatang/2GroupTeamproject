@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats:
-    maxHealth: 25
+    maxHealth: 20
     speed: 2
 --- !u!1 &4227291449971462608
 GameObject:
