@@ -25,16 +25,17 @@ public class Enemy : MonoBehaviour
         stats.currentStats.maxHealth -= dmg;// 타워 공격력이랑 연결해주기.
         if (stats.currentStats.maxHealth <= 0)
         {
-            StartCoroutine(Die());
+            StartCoroutine(Die(20));
         }
     }
 
-    IEnumerator Die()
+    IEnumerator Die(int gold)
     {
         animator.SetBool("IsDead", true);
         stats.currentStats.speed = 0;
         gameObject.tag = "Dead";
         SoundManager.Instance.PlaySFX("Coin");
+        UIManager.instance.playerGold.GoldPlus(gold);
         wayPointMoveTest.ResetWayPoint();
         yield return new WaitForSeconds(deathDelay);
         gameObject.SetActive(false);
