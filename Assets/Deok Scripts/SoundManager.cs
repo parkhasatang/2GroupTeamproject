@@ -17,7 +17,6 @@ public class SoundManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -80,6 +79,11 @@ public class SoundManager : MonoBehaviour
 
     public void ClickBtnSound()
     {
-        SoundManager.Instance.PlaySFX("Select");
+        PlaySFX("Select");
+    }
+
+    public void StartBtnSound()
+    {
+        PlaySFX("StartBtn");
     }
 }
