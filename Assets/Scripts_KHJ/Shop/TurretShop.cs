@@ -15,4 +15,8 @@ public class TurretShop
         prefab = _prefab;
     }
 
+    internal GameObject GetTurretPrefab()
+    {
+        throw new NotImplementedException();
+    }
 }
