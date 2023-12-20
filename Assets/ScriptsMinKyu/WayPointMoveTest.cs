@@ -8,6 +8,7 @@ public class WayPointMoveTest : MonoBehaviour
 {
     private PoolManager poolManager;
     private EnemyStatsHandlerTest _stats;
+    private PlayerHP playerHP;
     int monsterNum = 0;
 
 
@@ -15,6 +16,11 @@ public class WayPointMoveTest : MonoBehaviour
     {
         _stats = GetComponentInParent<EnemyStatsHandlerTest>();
         poolManager = GetComponentInParent<PoolManager>();
+    }
+
+    private void OnEnable()
+    {
+        ResetWayPoint();
     }
 
     void Start()
@@ -60,8 +66,8 @@ public class WayPointMoveTest : MonoBehaviour
 
         if(monsterNum == poolManager.wayPoint.Length)
         {
-            gameObject.SetActive(false);
-            ResetWayPoint();
+            transform.parent.gameObject.SetActive(false);
+            UIManager.instance.playerHP.TakeDamage(1);
         }
         
     }
