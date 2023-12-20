@@ -582,7 +582,6 @@ GameObject:
   - component: {fileID: 4860700395802797526}
   - component: {fileID: 1800041633773696390}
   - component: {fileID: 4179978824772028702}
-  - component: {fileID: 8408470911314608647}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Enemy
@@ -678,18 +677,6 @@ MonoBehaviour:
   baseStats:
     maxHealth: 25
     speed: 2
---- !u!114 &8408470911314608647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3765432891000490371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2f9d51d4827ab443a35c0320f2c16d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4227291449971462608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,6 +990,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7064811177114896884}
+  - component: {fileID: 6906197289041907267}
   m_Layer: 0
   m_Name: EnemyRat
   m_TagString: Enemy
@@ -1027,6 +1015,18 @@ Transform:
   m_Father: {fileID: 1373405540626727781}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6906197289041907267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7180540508175726824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9d51d4827ab443a35c0320f2c16d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7379832790550909988
 GameObject:
   m_ObjectHideFlags: 0

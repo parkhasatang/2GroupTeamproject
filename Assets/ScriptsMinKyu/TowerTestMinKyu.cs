@@ -34,16 +34,13 @@ public class TowerTestMinKyu : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
-            Debug.Log("콜라이더 찍힘");
             if (collider.CompareTag("Enemy"))
             {
-                Debug.Log("검출됌");
                 float distanceToEnemy = Vector2.Distance(transform.position, collider.transform.position);
 
                 // 현재 적이 가장 가까운 적인지 확인
                 if (distanceToEnemy < closestDistance)
                 {
-                    Debug.Log("찍힘");
                     closestEnemy = collider;
                     closestDistance = distanceToEnemy;
                 }
@@ -61,7 +58,6 @@ public class TowerTestMinKyu : MonoBehaviour
             Vector3 spawnPosition = transform.position;
             BulletTestMinKyu bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity).GetComponent<BulletTestMinKyu>();
             bullet.SetTarget(closestEnemy.transform, AttackDamage);
-            Debug.Log("타워의 공격");
         }
     }
 

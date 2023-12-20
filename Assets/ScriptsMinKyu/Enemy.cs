@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        wayPointMoveTest = GetComponent<WayPointMoveTest>();
+        wayPointMoveTest = GetComponentInChildren<WayPointMoveTest>();
         stats = GetComponent<EnemyStatsHandlerTest>();
         animator = GetComponentInChildren<Animator>();
         /*OnEnemyHit += EnemyHit;*/

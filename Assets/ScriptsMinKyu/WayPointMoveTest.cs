@@ -13,13 +13,13 @@ public class WayPointMoveTest : MonoBehaviour
 
     private void Awake()
     {
-        _stats = GetComponent<EnemyStatsHandlerTest>();
+        _stats = GetComponentInParent<EnemyStatsHandlerTest>();
         poolManager = GetComponentInParent<PoolManager>();
     }
 
     void Start()
     {
-        transform.position = poolManager.wayPoint[monsterNum].position;
+        transform.parent.position = poolManager.wayPoint[monsterNum].position;
     }
 
     // Update is called once per frame
@@ -50,12 +50,12 @@ public class WayPointMoveTest : MonoBehaviour
                 gameObject.transform.rotation = rotation;
             }
             // 오브젝트 이동
-            gameObject.transform.position = Vector3.MoveTowards
-            (gameObject.transform.position, poolManager.wayPoint[monsterNum].transform.position, _stats.currentStats.speed * Time.deltaTime);
+            gameObject.transform.parent.position = Vector3.MoveTowards
+            (gameObject.transform.parent.position, poolManager.wayPoint[monsterNum].transform.position, _stats.currentStats.speed * Time.deltaTime);
         }
         
 
-        if(transform.position == poolManager.wayPoint[monsterNum].transform.position )
+        if(transform.parent.position == poolManager.wayPoint[monsterNum].transform.position )
             monsterNum++;
 
         if(monsterNum == poolManager.wayPoint.Length)
