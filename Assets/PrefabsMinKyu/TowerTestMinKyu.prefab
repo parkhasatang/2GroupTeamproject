@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dce82d8d84465a4ba56f400f9c2f874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDamage: 1
+  AttackDamage: 20
   AttackRange: 4
   AttackCooltime: 1
   bulletPrefab: {fileID: 9022124610621113898, guid: f46ee6f5acc8fec46a087ed0353ca32e, type: 3}

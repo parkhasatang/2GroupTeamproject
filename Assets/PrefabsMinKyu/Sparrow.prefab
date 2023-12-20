@@ -311,9 +311,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4547952097383721188}
-  - component: {fileID: 5865135897400286731}
-  - component: {fileID: 8139493161081437489}
-  - component: {fileID: 5259553789728252073}
   m_Layer: 0
   m_Name: EnemySparrow
   m_TagString: Enemy
@@ -328,7 +325,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3570439635932838636}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -336,46 +333,7 @@ Transform:
   - {fileID: 8309486327995991092}
   m_Father: {fileID: 631971581979048440}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &5865135897400286731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3570439635932838636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83f7efb8af336ac42a7e6ac88998c440, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseStats:
-    maxHealth: 24
-    speed: 2
---- !u!114 &8139493161081437489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3570439635932838636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2f9d51d4827ab443a35c0320f2c16d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5259553789728252073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3570439635932838636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1301f8d37dea02418076695578d10f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3689184357859712715
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +470,9 @@ GameObject:
   m_Component:
   - component: {fileID: 631971581979048440}
   - component: {fileID: 698172625505650037}
+  - component: {fileID: 8430157877066636451}
+  - component: {fileID: 3407559255296547541}
+  - component: {fileID: 3390620149420608863}
   m_Layer: 0
   m_Name: Sparrow
   m_TagString: Enemy
@@ -580,6 +541,45 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.7}
   m_EdgeRadius: 0
+--- !u!114 &8430157877066636451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4937856480603478815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1301f8d37dea02418076695578d10f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3407559255296547541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4937856480603478815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83f7efb8af336ac42a7e6ac88998c440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats:
+    maxHealth: 20
+    speed: 3
+--- !u!114 &3390620149420608863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4937856480603478815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9d51d4827ab443a35c0320f2c16d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5269523836570197247
 GameObject:
   m_ObjectHideFlags: 0

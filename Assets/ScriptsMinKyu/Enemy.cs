@@ -7,23 +7,36 @@ public class Enemy : MonoBehaviour
 {
     private EnemyStatsHandlerTest stats;
     private Animator animator;
-    public Action OnEnemyHit;
+    /*public Action<int> OnEnemyHit;*/
+    private float deathDelay = 2f;
+    private WayPointMoveTest wayPointMoveTest;
+    private BulletTestMinKyu bulletTest;
 
     private void Awake()
     {
+        wayPointMoveTest = GetComponent<WayPointMoveTest>();
         stats = GetComponent<EnemyStatsHandlerTest>();
         animator = GetComponentInChildren<Animator>();
-        OnEnemyHit += EnemyHit;
+        /*OnEnemyHit += EnemyHit;*/
     }
 
-    private void EnemyHit()
+    public void EnemyHit(int dmg)
     {
-        stats.currentStats.maxHealth -= 10;// 타워 공격력이랑 연결해주기.
+        stats.currentStats.maxHealth -= dmg;// 타워 공격력이랑 연결해주기.
         if (stats.currentStats.maxHealth <= 0)
         {
-            gameObject.SetActive(false);//1초뒤에 해주기 죽는 모션 표현하기
-            animator.SetBool("IsDead", true);
+            StartCoroutine(Die());
         }
+    }
+
+    IEnumerator Die()
+    {
+        animator.SetBool("IsDead", true);
+        stats.currentStats.speed = 0;
+        gameObject.tag = "Dead";
+        wayPointMoveTest.ResetWayPoint();
+        yield return new WaitForSeconds(deathDelay);
+        gameObject.SetActive(false);
     }
 
 

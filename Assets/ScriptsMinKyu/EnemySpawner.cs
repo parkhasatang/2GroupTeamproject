@@ -17,6 +17,8 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
         GameObject enemy = poolManager.Get(Random.Range(0,2));
+        enemy.tag = "Enemy";
+        enemy.GetComponent<EnemyStatsHandlerTest>().UpdateEnemyStats(); // 한번에 다 초기값으로 초기화 시킴
         SpawnPosition = new Vector3(-11.48f, 6.46f, -10f);
         enemy.transform.position = SpawnPosition;
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
