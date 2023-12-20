@@ -86,7 +86,7 @@ public class TowerManager : MonoBehaviour   //鸥况狼 急琶, 积己, 秦力, 弊府绊 付
                 SpawnTower(spawnPosition);
 
                 // 鸥况 积己 家府甫 犁积
-                AudioManager.instance.PlaySfx(AudioManager.Sfx.Tower);
+                
             }
         }
     }
