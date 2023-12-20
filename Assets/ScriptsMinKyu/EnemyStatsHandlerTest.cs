@@ -5,14 +5,14 @@ using UnityEngine;
 public class EnemyStatsHandlerTest : MonoBehaviour
 {
     [SerializeField] EnemyStatsTest baseStats;
-    public EnemyStatsTest currentStats { get; private set; }
+    public EnemyStatsTest currentStats { get; set; }
 
     private void Awake()
     {
         UpdateEnemyStats();
     }
 
-    private void UpdateEnemyStats()
+    public void UpdateEnemyStats()
     {
         currentStats = new EnemyStatsTest();
         currentStats.maxHealth = baseStats.maxHealth;
