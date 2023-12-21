@@ -4,14 +4,14 @@
 
 ## 🖥 개요 🖥
 
-#### 프로젝트 이름: 농장을 지켜츄🐹🐤
+#### 프로젝트 이름: 농장을 지켜추🐹🐤
 #### 프로젝트 지속기간: 2023/12/15 ~ 2023/12/21
 #### 개발엔진 및 언어: Unity & C# 
 #### 멤버: 박민규, 임덕한, 김혜진, 윤철주, 김수아
 
 ## 👾 게임 배경 👾
 
-<img src = "https://github.com/parkhasatang/2GroupTeamproject/assets/149459760/487c748d-2503-4879-9aaa-7736697441ce">
+<img src = "https://github.com/parkhasatang/2GroupTeamproject/assets/149459760/a569a8ce-ec43-436f-b596-f1ff14356d36">
 
 #### 배고픈 동물들이 산에서 농장으로 내려가 농장을 털어버린다
 #### 농장을 막기위해 타워를 설치해 동물을 저지해야한다! ! 
