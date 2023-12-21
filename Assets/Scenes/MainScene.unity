@@ -1262,7 +1262,7 @@ GameObject:
   - component: {fileID: 259800998}
   - component: {fileID: 259800997}
   m_Layer: 0
-  m_Name: MinKyuUiManager
+  m_Name: TowerUiManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
