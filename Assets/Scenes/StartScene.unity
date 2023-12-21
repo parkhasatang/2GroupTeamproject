@@ -1827,24 +1827,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSounds:
   - name: BGM
-    clip: {fileID: 8300000, guid: 4559935c00ef8e94b846e2e03e39f0d0, type: 3}
+    clip: {fileID: 8300000, guid: 3492800d565f25842a5ef29c26470c5f, type: 3}
   sfxSounds:
-  - name: Tower
-    clip: {fileID: 8300000, guid: 0972f998bd5596942a4ebf5b0fe56b76, type: 3}
-  - name: Tower2
-    clip: {fileID: 8300000, guid: eb24f47a98f4dc74ab199f63c2685f66, type: 3}
-  - name: Tower3
-    clip: {fileID: 8300000, guid: 852f144f44520fc41955b063afa5737c, type: 3}
-  - name: Shoot
-    clip: {fileID: 8300000, guid: 22ad8531b3c03a34a8a8d0d93ef70ba4, type: 3}
-  - name: Hit
-    clip: {fileID: 8300000, guid: be4b507b5e11ae24082a51c58b3dca8e, type: 3}
-  - name: Die
-    clip: {fileID: 8300000, guid: f3591901860e51c4b840839eefdca7f2, type: 3}
+  - name: StartBtn
+    clip: {fileID: 8300000, guid: be1bd0962b892894f95f9d6b6e8e94b6, type: 3}
   - name: Select
     clip: {fileID: 8300000, guid: f9eac8cba6798ab46a3f293c72a91fcd, type: 3}
-  - name: Coin
-    clip: {fileID: 8300000, guid: 58ab6ec9deac40341b52a860fe5256ca, type: 3}
   musicSource: {fileID: 1809040416}
   sfxSource: {fileID: 232603266}
 --- !u!4 &1658414701
@@ -2909,13 +2897,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1658414700}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: StartBtnSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3257,6 +3245,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1658414700}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: ClickBtnSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
