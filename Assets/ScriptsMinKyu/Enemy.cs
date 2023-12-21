@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     private float deathDelay = 2f;
     private WayPointMoveTest wayPointMoveTest;
     private BulletTestMinKyu bulletTest;
+    public bool IsBoss;
 
     private void Awake()
     {
@@ -33,11 +34,15 @@ public class Enemy : MonoBehaviour
     {
         animator.SetBool("IsDead", true);
         stats.currentStats.speed = 0;
+        if (IsBoss)
+        {
+            UIManager.instance.StageClear();
+        }
         gameObject.tag = "Dead";
         SoundManager.Instance.PlaySFX("Coin");
         UIManager.instance.playerGold.GoldPlus(gold);
         wayPointMoveTest.ResetWayPoint();
-        yield return new WaitForSeconds(deathDelay);
+        yield return new WaitForSecondsRealtime(deathDelay);
         gameObject.SetActive(false);
     }
 
