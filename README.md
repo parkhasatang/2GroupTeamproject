@@ -12,6 +12,7 @@
 ## 👾 게임 배경 👾
 
 <img src = "https://github.com/parkhasatang/2GroupTeamproject/assets/149459760/487c748d-2503-4879-9aaa-7736697441ce">
+
 #### 배고픈 동물들이 산에서 농장으로 내려가 농장을 털어버린다
 #### 농장을 막기위해 타워를 설치해 동물을 저지해야한다! ! 
 
