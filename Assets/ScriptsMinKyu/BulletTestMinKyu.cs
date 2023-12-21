@@ -21,7 +21,7 @@ public class BulletTestMinKyu : MonoBehaviour
         if (distance < 0.1f)
         {
             target.GetComponent<Enemy>().EnemyHit(damage);
-            SoundManager.Instance.PlaySFX("Hit");
+            SoundManager.Instance.PlaySFX("Shoot");
             Destroy(gameObject);
         }
     }
