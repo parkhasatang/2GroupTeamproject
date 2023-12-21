@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1298216329731499577}
   - component: {fileID: 1527428908235390646}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5677313235868960103}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hair.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6876028816485170741}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tail.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 1770546470049024554}
   - component: {fileID: 7666547540831745095}
   - component: {fileID: 5635850205263644666}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sparrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3519414839493819840}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: feet.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4547952097383721188}
   - component: {fileID: 134338313564012761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemySparrow
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3749658310793865704}
   - component: {fileID: 7863388066759075339}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8084028529839617784}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tail.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 698172625505650037}
   - component: {fileID: 8430157877066636451}
   - component: {fileID: 3407559255296547541}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sparrow
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats:
-    maxHealth: 20
+    maxHealth: 10
     speed: 3
 --- !u!1 &5269523836570197247
 GameObject:
@@ -589,7 +589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 269649955371509185}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6320539656205840366}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: feet.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,7 +652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8785621898478812909}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -692,7 +692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 863629703040861610}
   - component: {fileID: 3291921414650292332}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,7 +786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6790343941395226021}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wing.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +817,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4560632314812295936}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3173211506557706378}
   - component: {fileID: 6279851126718748583}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -944,7 +944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4004236531817672637}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hair.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -975,7 +975,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5161785733108033515}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wing.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}

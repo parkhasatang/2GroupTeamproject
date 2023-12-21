@@ -208,7 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8434660366085510987}
-  - component: {fileID: 5316057483701432132}
+  - component: {fileID: 779678338401410909}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -233,7 +233,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5316057483701432132
+--- !u!114 &779678338401410909
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -242,11 +242,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6445832650652090849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 901bbd5d5811822438b89d7faeb74016, type: 3}
+  m_Script: {fileID: 11500000, guid: b62a3e660d11ebc46bd0009bedf35fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRotationPoint: {fileID: 2360988801246419291}
-  targetingRange: 20
+  AttackDamage: 10
+  AttackRange: 10
+  AttackCooltime: 1
+  bulletPrefab: {fileID: 9022124610621113898, guid: a3acc7d4b24afb2479cf5ab575af5fbd, type: 3}
 --- !u!1 &8305407799659216046
 GameObject:
   m_ObjectHideFlags: 0

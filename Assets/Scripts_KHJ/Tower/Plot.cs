@@ -37,6 +37,6 @@ public class Plot : MonoBehaviour
         tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
         //tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
 
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Tower);
+        
     }
 }

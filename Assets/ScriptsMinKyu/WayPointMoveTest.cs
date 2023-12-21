@@ -8,7 +8,7 @@ public class WayPointMoveTest : MonoBehaviour
 {
     private PoolManager poolManager;
     private EnemyStatsHandlerTest _stats;
-    int monsterNum = 0;
+    int monsterNum = 1;
 
 
     private void Awake()
@@ -17,10 +17,11 @@ public class WayPointMoveTest : MonoBehaviour
         poolManager = GetComponentInParent<PoolManager>();
     }
 
-    void Start()
+    private void OnEnable()
     {
-        transform.parent.position = poolManager.wayPoint[monsterNum].position;
+        ResetWayPoint();
     }
+
 
     // Update is called once per frame
     void Update()
@@ -34,21 +35,7 @@ public class WayPointMoveTest : MonoBehaviour
         {
             //오브젝트 회전
             Vector3 directionToTarget = poolManager.wayPoint[monsterNum].position - gameObject.transform.position;
-            if (monsterNum == 1)
-            {
-                Quaternion rotation = Quaternion.Euler(new Vector3(0f, 180f, 0f));
-                gameObject.transform.rotation = rotation;
-            }
-            else if (monsterNum == 2)
-            {
-                Quaternion rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
-                gameObject.transform.rotation = rotation;
-            }
-            else if (monsterNum == 3)
-            {
-                Quaternion rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
-                gameObject.transform.rotation = rotation;
-            }
+            transform.rotation = poolManager.wayPoint[monsterNum - 1].rotation;
             // 오브젝트 이동
             gameObject.transform.parent.position = Vector3.MoveTowards
             (gameObject.transform.parent.position, poolManager.wayPoint[monsterNum].transform.position, _stats.currentStats.speed * Time.deltaTime);
@@ -60,15 +47,17 @@ public class WayPointMoveTest : MonoBehaviour
 
         if(monsterNum == poolManager.wayPoint.Length)
         {
-            gameObject.SetActive(false);
-            ResetWayPoint();
+            transform.parent.gameObject.SetActive(false);
+            UIManager.instance.playerHP.TakeDamage(1);
+            SoundManager.Instance.PlaySFX("Hit");
         }
         
     }
 
     public void ResetWayPoint()
     {
-        monsterNum = 0;
+        monsterNum = 1;
+        transform.parent.position = poolManager.wayPoint[monsterNum - 1].position;       
     }
     
 }
